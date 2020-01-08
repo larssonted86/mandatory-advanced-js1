@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+import io from 'socket.io-client';
 import './App.css';
+import Listen from './Listen.js';
+import Write from './Write.js';
+const socket = io('http://3.120.96.16:3000');
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+socket.on('connect', function() {
+  console.log('connected');
+});
+socket.on('messages', function(data) {
+  console.log(data);
+});
+socket.on('new_message', function(data) {
+  console.log(data);
+});
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <div className="App">
+        <Listen />
+      </div>
+    );
+  }
 }
 
 export default App;
