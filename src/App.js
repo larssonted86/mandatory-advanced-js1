@@ -1,6 +1,7 @@
 import React from 'react';
 import io from 'socket.io-client';
 import './App.css';
+import Login from './Login.js'
 import ChatContainer from './chatContainer.js';
 import Header from './Header.js';
 import Write from './Write.js';
@@ -29,6 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <Login />
         <Header />
         <ChatContainer history={this.state.history} />        <Write />
       </div>
