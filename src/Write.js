@@ -38,12 +38,12 @@ class Write extends React.Component {
       paddingLeft: '15px'
     };
 
-    const fromStyle = {
+    const formStyle = {
       backgroundColor: 'lightblue',
       padding: '5px'
     }
     return (
-      <form style={fromStyle} onSubmit={this.onSubmit}>
+      <form style={formStyle} onSubmit={this.onSubmit}>
         <input
           type="text"
           id="userMessage"
