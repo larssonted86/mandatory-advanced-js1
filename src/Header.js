@@ -29,20 +29,20 @@ class Header extends React.Component {
     }
 
     const buttonStyle = {
-      marginTop: '15px',
+      marginTop: '20px',
       border: 'none',
       borderRadius: '45px',
       height: '40px',
       width: '200px',
-      backgroundColor: 'lightblue',
-      color: 'white',
+      backgroundColor: '#2E3440',
+      color: '#81A1C1',
       fontSize: '30px',
 
     }
 
     const headerStyle = {
-      backgroundColor: 'lightblue',
-      color: 'white',
+      backgroundColor: '#2E3440',
+      color: '#81A1C1',
       border: 'solid White 1px',
       display: 'flex',
       paddingLeft: '20px',

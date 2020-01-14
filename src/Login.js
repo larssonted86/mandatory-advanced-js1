@@ -49,6 +49,7 @@ export class Login extends Component {
             borderRadius: '45px',
             height: '40px',
             width: '250px',
+            fontSize: '25px'
         }
 
         const buttonStyle = {

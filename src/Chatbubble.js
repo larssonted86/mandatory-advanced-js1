@@ -4,10 +4,10 @@ class Chatbubble extends React.Component {
   render() {
     const chatbubbleStyle = {
       display: 'flex',
-      backgroundColor: 'lightgrey',
+      backgroundColor: '#4C566A',
       borderRadius: '45px',
       border: 'solid 1px grey',
-      color: 'white',
+      color: '#81A1C1',
       paddingLeft: '15px',
       marginTop: '5px',
     };

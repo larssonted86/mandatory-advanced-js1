@@ -33,13 +33,16 @@ class Write extends React.Component {
       border: 'solid 1px black',
       borderRadius: '45px',
       height: '25px',
-      width: '300px',
-      paddingLeft: '15px'
+      width: '95%',
+      paddingLeft: '15px',
+      height: '35px',
+      fontSize: '20px'
     };
 
     const formStyle = {
-      backgroundColor: 'lightblue',
-      padding: '5px'
+      backgroundColor: '#2E3440',
+      padding: '5px',
+      height: '40px',
     }
     return (
       <form style={formStyle} onSubmit={this.onSubmit}>
