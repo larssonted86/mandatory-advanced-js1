@@ -7,7 +7,6 @@ class Write extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: 'Ted',
       message: '',
     }
     this.onSubmit = this.onSubmit.bind(this);
@@ -18,7 +17,7 @@ class Write extends React.Component {
   onSubmit(e) {
     e.preventDefault();
     socket.emit('message', {
-      username: this.state.username,
+      username: this.props.username,
       content: this.state.message,
     })
     this.setState({

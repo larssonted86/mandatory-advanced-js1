@@ -29,6 +29,7 @@ class App extends React.Component {
     this.setState({
       username: e.target.value
     })
+    console.log(this.state.username)
   }
   componentDidMount() {
     socket.on('messages', data => {
@@ -46,10 +47,12 @@ class App extends React.Component {
   render() {
     return (<Router>
       <div className="App">
-        <Header />
         <Route path="/" exact render={() => <Login setUsername={this.setUsername} />} />
+        <Route path="/chat" render={() => <Header />} />
+
         <Route path="/chat" render={() => <ChatContainer history={this.state.history} />} />
-        <Route path="/chat" render={() => <Write />} />
+        <Route path="/chat" render={() => <Write username={this.state.username} />} />
+
 
 
 
