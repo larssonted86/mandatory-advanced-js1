@@ -34,35 +34,13 @@ export class Login extends Component {
         if (this.state.login) {
             return <Redirect to='/chat' />;
         }
-        const loginStyle = {
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            height: '100vh',
-            backgroundColor: 'lightgrey',
-            padding: '150px',
-        }
 
-        const inputStyle = {
-            paddingLeft: '15px',
-            border: 'none',
-            borderRadius: '45px',
-            height: '40px',
-            width: '250px',
-            fontSize: '25px'
-        }
 
-        const buttonStyle = {
-            marginTop: '15px',
-            border: 'none',
-            borderRadius: '45px',
-            height: '40px',
-            width: '200px',
-        }
+
         return (
 
-            <div style={loginStyle}>
-                <h1>Login</h1>
+            <div style={loginStyle} >
+                <h1 style={{ color: '#BFA47B' }}>Login</h1>
                 <form onSubmit={this.onSubmit} style={{ alignItems: 'center' }}>
                     <input
                         type='text'
@@ -71,10 +49,46 @@ export class Login extends Component {
                         style={inputStyle}></input>
 
                 </form>
-                <button style={buttonStyle} onClick={this.onClick}>Enter</button>
+                <button style={buttonStyle} onClick={this.onClick}>Enter chatroom  ----------------------------></button>
             </div>
         )
     }
+}
+
+////////////////////////STYLES///////////////////////////////////////
+const loginStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    height: '100vh',
+    backgroundColor: '303030',
+    padding: '150px',
+}
+
+const inputStyle = {
+    paddingLeft: '15px',
+    borderTop: 'none',
+    borderLeft: 'none',
+    borderRight: 'none',
+    backgroundColor: '#303030',
+    borderBottom: '1px #BFA47B solid ',
+    height: '40px',
+    width: '400px',
+    fontSize: '25px',
+    color: '#BFA47B',
+
+}
+
+const buttonStyle = {
+    padding: 'none',
+    marginTop: '15px',
+    border: 'none',
+    borderRadius: '45px',
+    height: '40px',
+    width: '4200px',
+    backgroundColor: '#303030',
+    color: '#BFA47B',
+    fontSize: '24px'
 }
 
 export default Login

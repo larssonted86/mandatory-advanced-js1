@@ -27,26 +27,6 @@ class Header extends React.Component {
     if (this.state.close) {
       return <Redirect to='/' />;
     }
-
-    const buttonStyle = {
-      marginTop: '20px',
-      border: 'none',
-      borderRadius: '45px',
-      height: '40px',
-      width: '200px',
-      backgroundColor: '#2E3440',
-      color: '#81A1C1',
-      fontSize: '30px',
-
-    }
-
-    const headerStyle = {
-      backgroundColor: '#2E3440',
-      color: '#81A1C1',
-      border: 'solid White 1px',
-      display: 'flex',
-      paddingLeft: '20px',
-    };
     return (
       <div className="Header" style={headerStyle}>
         <h1> EC CHAT</h1>
@@ -57,5 +37,28 @@ class Header extends React.Component {
     );
   }
 }
+
+
+////////////////////////STYLES///////////////////////////////////////
+
+const buttonStyle = {
+  marginTop: '20px',
+  border: 'none',
+  borderRadius: '45px',
+  height: '40px',
+  width: '200px',
+  backgroundColor: '#303030',
+  color: ' #BFA47B',
+  fontSize: '30px',
+
+}
+
+const headerStyle = {
+  backgroundColor: '#303030',
+  color: ' #BFA47B',
+  borderBottom: 'solid #BFA47B 1px',
+  display: 'flex',
+  paddingLeft: '20px',
+};
 
 export default Header;

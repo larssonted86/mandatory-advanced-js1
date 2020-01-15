@@ -1,16 +1,17 @@
 import React from 'react';
 import Chatbubble from './Chatbubble.js';
-import { animateScroll } from 'react-scroll';
+
 
 class ChatContainer extends React.Component {
 
   render() {
 
     const containerStyle = {
-      height: '580px',
+      height: '500px',
       overflowY: 'scroll',
+      overflowX: 'hidden',
       overflowWrap: 'word-break',
-      backgroundColor: '#2E3440',
+      backgroundColor: '#303030',
       paddingBottom: '10px',
     }
     return <div style={containerStyle} id='chatContainer'>

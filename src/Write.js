@@ -29,21 +29,7 @@ class Write extends React.Component {
     this.setState({ message: e.target.value })
   }
   render() {
-    const inputStyle = {
-      border: 'solid 1px black',
-      borderRadius: '45px',
-      height: '25px',
-      width: '95%',
-      paddingLeft: '15px',
-      height: '35px',
-      fontSize: '20px'
-    };
 
-    const formStyle = {
-      backgroundColor: '#2E3440',
-      padding: '5px',
-      height: '40px',
-    }
     return (
       <form style={formStyle} onSubmit={this.onSubmit}>
         <input
@@ -58,4 +44,28 @@ class Write extends React.Component {
     );
   }
 }
+
+////////////////////////STYLES///////////////////////////////////////
+
+const inputStyle = {
+  paddingLeft: '15px',
+  border: 'none',
+  backgroundColor: '#BFA47B',
+  height: '40px',
+  width: '95%',
+  fontSize: '25px',
+  color: '#303030',
+  borderRadius: '45px',
+  marginLeft: '15px'
+};
+
+
+
+const formStyle = {
+  backgroundColor: '#303030',
+  padding: '5px',
+  height: '40px',
+}
 export default Write;
+
+

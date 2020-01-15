@@ -49,15 +49,8 @@ class App extends React.Component {
       <div className="App">
         <Route path="/" exact render={() => <Login setUsername={this.setUsername} />} />
         <Route path="/chat" render={() => <Header />} />
-
         <Route path="/chat" render={() => <ChatContainer history={this.state.history} />} />
         <Route path="/chat" render={() => <Write username={this.state.username} />} />
-
-
-
-
-
-
       </div>
     </Router>
     );
