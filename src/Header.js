@@ -1,6 +1,5 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom'
-
 import './App.css';
 
 class Header extends React.Component {
@@ -11,12 +10,15 @@ class Header extends React.Component {
     };
     this.closeApp = this.closeApp.bind(this)
   }
+
+  //function that sets the state.close to true 
   closeApp(e) {
     this.setState({
       close: true
     })
   }
 
+  //when the component mounts the state.close is set to false
   componentDidMount() {
     this.setState({
       close: false,
@@ -24,16 +26,23 @@ class Header extends React.Component {
   }
 
   render() {
+    //if state.close is true the user is returned to the login page
     if (this.state.close) {
       return <Redirect to='/' />;
     }
     return (
       <div className="Header" style={headerStyle}>
-        <h1> EC CHAT</h1>
-        <button
-          onClick={this.closeApp}
-          style={buttonStyle}>Close</button>
-      </div>
+        <div style={h1DivStyle}>
+          <h1> EC CHAT</h1>
+        </div>
+        <div style={buttonDivStyle}>
+          <button
+            onClick={this.closeApp}
+            style={buttonStyle}>Close</button>
+        </div>
+
+
+      </div >
     );
   }
 }
@@ -61,4 +70,19 @@ const headerStyle = {
   paddingLeft: '20px',
 };
 
+const buttonDivStyle = {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  paddingRight: '15px',
+  width: '100%'
+}
+
+const h1DivStyle = {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  alignItems: 'center',
+  paddingRight: '15px',
+  width: '250px'
+}
 export default Header;

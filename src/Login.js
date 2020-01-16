@@ -5,25 +5,21 @@ export class Login extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            login: false,
+            username: '',
         }
 
         this.onSubmit = this.onSubmit.bind(this)
-        this.onClick = this.onClick.bind(this)
     }
+
+    //prevents default behavior and then sets the state.username to this.props.username
     onSubmit(e) {
         e.preventDefault();
         this.setState({
-            login: true
+            username: this.props.username
         })
     }
 
-    onClick(e) {
-        this.setState({
-            login: true
-        })
-    }
-
+    //when component is mounted the state.login is set to false
     componentDidMount() {
         this.setState({
             login: false,
@@ -31,7 +27,8 @@ export class Login extends Component {
     }
 
     render() {
-        if (this.state.login) {
+        //checks if the username is valid and if so sends the user to the chatroom
+        if (/^[a-zA-Z\d_-\s]{1,12}$/.test(this.state.username)) {
             return <Redirect to='/chat' />;
         }
 
@@ -49,7 +46,7 @@ export class Login extends Component {
                         style={inputStyle}></input>
 
                 </form>
-                <button style={buttonStyle} onClick={this.onClick}>Enter chatroom  ----------------------------></button>
+                <button style={buttonStyle} onClick={this.onSubmit}>Enter chatroom  ----------------------------></button>
             </div>
         )
     }

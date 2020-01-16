@@ -5,8 +5,9 @@ import { emojify } from 'react-emojione';
 class Chatbubble extends React.Component {
   render() {
 
+    //needed to modify the Linkify style and behavior
     const componentDecorator = (href, text, key) => (
-      <a href={href} key={key} style={linkStyle}>
+      <a href={href} key={key} style={linkStyle} target={'_blank'}>
         {text}
       </a>
     );
@@ -39,7 +40,6 @@ const chatbubbleStyle = {
   width: '100%',
   color: '#BFA47B',
   alignItems: 'center',
-
 };
 
 const userNameStyle = {
@@ -60,7 +60,6 @@ const usernameDiv = {
   width: '130px',
   borderRight: '1px #BFA47B solid ',
   borderRadius: '90px',
-  overflowWrap: 'word-break',
 
 };
 
@@ -71,7 +70,8 @@ const userMessageDiv = {
   heigth: '50px',
   width: '90%',
   overflowWrap: 'word-break',
-  paddingLeft: '15px'
+  paddingLeft: '15px',
+  wordBreak: 'break-word',
 };
 
 const linkStyle = {
